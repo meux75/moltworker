@@ -90,11 +90,11 @@ jobs:
       - name: Install plwr
         uses: taiki-e/install-action@v2
         with:
-          tool: plwr@0.7.0
+          tool: plwr@0.7.2
 
       - name: Install Playwright browsers
         run: |
-          npm install -g @playwright/cli
+          npm install -g playwright
           npx playwright install --with-deps chromium
 
       - name: Run E2E tests (${{ matrix.config.name }})
